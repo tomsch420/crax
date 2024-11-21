@@ -19,6 +19,7 @@ class CraxTestCase(unittest.TestCase):
             cls: crax.Base
             cls.set_comment_to_docstring()
         crax.ontology.save()
+        self.assertTrue(len(crax.PhysicalObject.comment) > 0)
 
 if __name__ == '__main__':
     unittest.main()
